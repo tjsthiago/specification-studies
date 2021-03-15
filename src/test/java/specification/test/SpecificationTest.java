@@ -23,13 +23,13 @@ public class SpecificationTest {
 	public void assertThatAnInvoiceIsValid() {
 		logger.info("start assertThatAnInvoiceIsValid");
 		
-		InvoiceEntry sms = new InvoiceEntry("call", 0.5);
-		InvoiceEntry call = new InvoiceEntry("call", 1.5);
+		InvoiceEntry callOne = new InvoiceEntry("call", 0.5);
+		InvoiceEntry callTwo = new InvoiceEntry("call", 1.5);
 		double invoiceValue = 2.0;
 		
 		Invoice invoice =  new Invoice(
 			invoiceValue, 
-			Arrays.asList(sms, call), 
+			Arrays.asList(callOne, callTwo), 
 			new Client("client one"),
 			new InvoiceSpeficificationsForClientOne()
 		);
